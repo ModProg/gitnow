@@ -22,6 +22,11 @@ if functions -q __fundle_plugins_dir
     source "$fundledir/joseluisq/gitnow/functions/__gitnow_manual.fish"
     source "$fundledir/joseluisq/gitnow/functions/__gitnow_config_file.fish"
     source "$fundledir/joseluisq/gitnow/completions/__gitnow_completions.fish"
+else if set -q plugin_dir
+    source "$plugin_dir/functions/__gitnow_functions.fish"
+    source "$plugin_dir/functions/__gitnow_manual.fish"
+    source "$plugin_dir/functions/__gitnow_config_file.fish"
+    source "$plugin_dir/completions/__gitnow_completions.fish"
 else
     source "$fish_functions/__gitnow_functions.fish"
     source "$fish_functions/__gitnow_manual.fish"
